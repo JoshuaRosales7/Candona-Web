@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>La Candona</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="La Candona Team" name="keywords">
+    <meta content="La Candona Team" name="description">
+
+    <link rel="icon" href="img/Logotipo La Candona Sin BC.png" type="image/x-icon">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header Start -->
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-2">
+                        <div class="brand">
+                            <a href="index.html">
+                                <img src="img/Logo La Candona Sin BC.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+
+                        <div class="navbar navbar-expand-lg bg-light navbar-light">
+                            <a href="#" class="navbar-brand">MENÚ</a>
+                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                <div class="navbar-nav ml-auto">
+                                    <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                                    <a href="about.html" class="nav-item nav-link">Sobre Nosotros</a>
+                                    <a href="services.html" class="nav-item nav-link">Servicios</a>
+                                    <a href="portfolio.html" class="nav-item nav-link">Proyectos</a>
+
+                                    <a href="contact.html" class="nav-item nav-link">Contáctenos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Hero Start -->
+        <div class="hero">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2><span>La</span> Candona</h2>
+                        <p>Bienvenidos a La Candona, un equipo compuesto por tres jóvenes entusiastas de Venezuela y Guatemala, cuyas edades oscilan entre los 16 y 18 años. Desde nuestro rincón en el Liceo Guatemala, nos esforzamos por marcar la diferencia
+                            a través de acciones concretas para proteger nuestro planeta y a las demas personas.</p>
+                    </div>
+                    <div class="col-md-6 ">
+                        <img src="images.jpg " alt="Imagen ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+        <!-- About Start -->
+        <div class="about">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div id="video-section">
+                            <div class="youtube-player" data-id="jssO8-5qmag"></div>
+
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    var div, n,
+                                        v = document.getElementsByClassName("youtube-player");
+                                    for (n = 0; n < v.length; n++) {
+                                        div = document.createElement("div");
+                                        div.setAttribute("data-id", v[n].dataset.id);
+                                        div.innerHTML = labnolThumb(v[n].dataset.id);
+                                        div.onclick = labnolIframe;
+                                        v[n].appendChild(div);
+                                    }
+                                });
+
+                                function labnolThumb(id) {
+                                    var thumb = '<img src="/images.jpg">',
+                                        play = '<div class="play"></div>';
+                                    return thumb.replace("ID", id) + play;
+                                }
+
+                                function labnolIframe() {
+                                    var iframe = document.createElement("iframe");
+                                    var embed = "https://www.youtube.com/watch?v=odYOYnTP_v8";
+                                    iframe.setAttribute("src", embed + this.dataset.id);
+                                    iframe.setAttribute("frameborder", "0");
+                                    iframe.setAttribute("allowfullscreen", "1");
+                                    this.parentNode.replaceChild(iframe, this);
+                                }
+                            </script>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <h2 class="section-title ">Conócenos</h2>
+                        <p>
+                            Somos apasionados defensores del medio ambiente y creemos en un futuro sostenible, donde la tecnología sea una aliada para las generaciones venideras. Con recursos limitados, pero con un compromiso inquebrantable, trabajamos incansablemente para contribuir
+                            a un mundo donde las personas puedan vivir más y mejor.
+                        </p>
+
+                        <a class="btn " href=" ">Saber Más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <script>
+            window.addEventListener('mouseover', initLandbot, {
+                once: true
+            });
+            window.addEventListener('touchstart', initLandbot, {
+                once: true
+            });
+            var myLandbot;
+
+            function initLandbot() {
+                if (!myLandbot) {
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.addEventListener('load', function() {
+                        var myLandbot = new Landbot.Livechat({
+                            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1789652-RB4BI3ADYA5HXJBN/index.json',
+                        });
+                    });
+                    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+                    var x = document.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                }
+            }
+        </script>
+        <!-- Service Start -->
+        <div class="service ">
+            <div class="container-fluid ">
+                <div class="section-header ">
+                    <h2>Nuestros Servicios</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item">
+                            <h3>Diseño Web</h3>
+                            <img src="img/icons/www.png" alt="Service">
+                            <p>Diseño web atractivo y funcional que destaca tu marca.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item">
+                            <h3>Programación</h3>
+                            <img src="img/icons/codigo.png" alt="Service">
+                            <p>Desarrollo de software eficiente y personalizado.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item">
+                            <h3>Diseño Metaverso</h3>
+                            <img src="img/icons/metaverso.png" alt="Service">
+                            <p>Experiencias inmersivas en el metaverso.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item">
+                            <h3>Diseño de APPs</h3>
+                            <img src="img/icons/androide.png" alt="Service">
+                            <p>Apps móviles intuitivas y atractivas.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item">
+                            <h3>Prototipos Arduino</h3>
+                            <img src="img/icons/palanca-de-mando.png" alt="Service">
+                            <p>Prototipos Arduino para proyectos innovadores.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item">
+                            <h3>Edición de Videos</h3>
+                            <img src="img/icons/edicion-de-video.png" alt="Service">
+                            <p>Transformación de grabaciones en videos impactantes.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item">
+                            <h3>Diseño Videojuegos</h3>
+                            <img src="img/icons/palanca-de-mando.png" alt="Service">
+                            <p>Creación de experiencias de juego cautivadoras.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-item">
+                            <h3>Creacion De Bots</h3>
+                            <img src="img/icons/robot-de-chat.png" alt="Service">
+                            <p>Creamos bots inteligentes para tus paginas o aplicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- FAQs Start -->
+
+        <div class="faqs">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="section-title">Preguntas Frecuentes</h2>
+                        <div id="accordion">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="true">
+                                ¿Cuál es la misión de Candona?
+                            </a>
+                                </div>
+                                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        La misión de Candona es utilizar la inteligencia artificial de manera ética y responsable para contribuir a un futuro sostenible, especialmente enfocándonos en la defensa del medio ambiente.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                ¿Cómo trabaja Candona para proteger el medio ambiente?
+                            </a>
+                                </div>
+                                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Candona trabaja incansablemente en proyectos basados en inteligencia artificial que van más allá de la mera innovación tecnológica, buscando soluciones que beneficien a la sociedad y al medio ambiente.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                                ¿Cuál es el enfoque de Candona en la ética tecnológica?
+                            </a>
+                                </div>
+                                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        En Candona, nos comprometemos a aplicar la inteligencia artificial de manera ética y responsable, considerando siempre el impacto positivo en la sociedad y el medio ambiente.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                                ¿Cómo puedo colaborar con Candona?
+                            </a>
+                                </div>
+                                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Puedes colaborar con Candona participando en nuestras iniciativas, compartiendo nuestras ideas o contactándonos directamente para explorar oportunidades de colaboración.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn" href="#">Haz más preguntas</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images.jpg" alt="Imagen">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs End -->
+
+        <!-- News Start -->
+        <div class="news ">
+            <div class="container-fluid ">
+                <div class="row align-items-center ">
+                    <div class="col-md-6 ">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGbqA7CKdPBo73Qh_g32fXH3aDXKig2RJUOQ&usqp=CAU" alt="Image ">
+                    </div>
+                    <div class="col-md-6 ">
+                        <h2 class="section-title ">Nuestra Misión</h2>
+                        <p>
+                            Enfocados en la defensa del medio ambiente, nos dedicamos a explorar las posibilidades de la inteligencia artificial para contribuir a un futuro sostenible. Creemos firmemente en el poder transformador de la tecnología y la innovación para abordar los
+                            desafíos globales que enfrenta nuestro mundo.
+                        </p>
+                        <a class="btn " href=" ">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- News End -->
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="footer ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-5 ">
+                    <div class="footer-about ">
+                        <h2>About Us</h2>
+                        <p>
+                            Candona: Jóvenes de Venezuela y Guatemala comprometidos con la protección del medio ambiente. Trabajamos incansablemente para contribuir a un mundo sostenible a través de la tecnología.
+                        </p>
+                        <br>
+
+                        <p><i class="fa fa-phone-alt "></i>+502 5866 0396</p>
+                        <p><i class="fa fa-envelope "></i>lacandona@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-7 ">
+                    <div class="row ">
+                        <div class="col-md-6 ">
+                            <div class="footer-link ">
+                                <h2>Useful Link</h2>
+                                <a href=" ">Sobre nosotros</a>
+                                <a href=" ">Our Services</a>
+                                <a href=" ">Our Portfolio</a>
+                                <a href=" ">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright ">
+            <div class="row ">
+                <div class="col-md-6 ">
+                    <p>&copy; <a href="https://www.instagram.com/alexxito_guapo/" target="_blank">Joshua Rosales</a>, Todos los derechos reservados.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js "></script>
+    <script src="lib/slick/slick.min.js "></script>
+    <script src="lib/isotope/isotope.pkgd.min.js "></script>
+    <script src="lib/lightbox/js/lightbox.min.js "></script>
+
+    <!-- Template Javascript -->
+    <script src="index.js "></script>
+</body>
+
+</html>
